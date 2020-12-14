@@ -6,5 +6,5 @@ service CatalogService @(path:'/browse') {
   } excluding { createdBy, modifiedBy };
 
   entity Orders as projection on my.Orders;
-  entity OrderItems as SELECT from my.OrderItems;
+  entity OrderItems as projection on my.OrderItems;
 }
