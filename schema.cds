@@ -18,12 +18,12 @@ entity Authors : managed {
 }
 
 entity Orders : managed {
-  key ID   : UUID;
+  key ID   : Integer;
   OrderNo  : String @title:'Order Number'; //> readable key
   Items    : Composition of many OrderItems on Items.parent = $self;
 }
 entity OrderItems {
-  key ID   : UUID;
+  key ID   : Integer;
   parent   : Association to Orders;
   book     : Association to Books;
   amount   : Integer;
