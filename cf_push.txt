@@ -1,0 +1,13 @@
+cf api https://api.cf.eu10.hana.ondemand.com
+
+cf login
+
+modify manifest.yml ==> "your hdi service name"
+cf create-service hana hdi-shared myhdi
+혹은
+scp cockpit GUI 로 수행( create instance )
+ 
+
+cf push -f gen/db -k 256M
+
+cf push -f gen/srv --random-route -k 320M 

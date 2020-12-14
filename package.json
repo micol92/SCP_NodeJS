@@ -1,0 +1,12 @@
+    "cds": {
+        "hana": {
+            "syntax": "hdi"
+        },
+        "requires": {
+            "db": {
+                "kind": "hana"
+            }
+        }
+    }
+    
+    

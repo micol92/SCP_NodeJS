@@ -1,0 +1,16 @@
+
+/browse/Orders?$expand=Items
+/browse/Orders(1000)?$expand=Items
+
+/browse/OrderItems?$expand=parent
+/browse/OrderItems(10000)?$expand=parent
+
+/browse/OrderItems?$expand=book
+/browse/OrderItems(10000)?$expand=book
+
+/browse/Books?$top=1
+/browse/Books?$filter=stock le 200
+
+
+****OData URI convention****
+https://www.odata.org/documentation/odata-version-2-0/uri-conventions/

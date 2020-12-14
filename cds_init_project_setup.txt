@@ -1,0 +1,2 @@
+cds init bookshop01 --add hana
+npm install
