@@ -5,8 +5,6 @@ service CatalogService @(path:'/browse') {
     author.name as author
   } excluding { createdBy, modifiedBy };
 
-  @requires_: 'authenticated-user'
-  @insertonly entity Orders as projection on my.Orders;
-  
-  @readonly entity OrderItems as SELECT from my.OrderItems;
+  entity Orders as projection on my.Orders;
+  entity OrderItems as SELECT from my.OrderItems;
 }
